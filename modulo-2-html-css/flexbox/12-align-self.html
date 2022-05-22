@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align items</title>
+    <style>
+        .flex-container{
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            display: flex;
+        }
+        .align-container{
+            align-items: center;
+        }
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+        }
+        .auto{
+            align-self: auto;
+        }
+        .center{
+            align-self: center;
+        }
+        .stretch{
+            align-self: stretch;
+        }
+        .start{
+            align-self: flex-start;
+        }
+        .end{
+            align-self: flex-end;
+        }
+        .baseline{
+            align-self: baseline;
+        }
+        .direction{
+            flex-direction: column;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Row</h1>
+    <section class="flex-container align-container">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Lorem ipsum is therefore aleays free from repetition</div>
+        <div class="item auto">item 4</div>
+    </section>
+    <section class="flex-container ">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Lorem ipsum is therefore aleays free from repetition</div>
+        <div class="item end">item 4</div>
+    </section>
+    <section class="flex-container ">
+        <div class="item center">AAA</div>
+        <div class="item start">123ddddddddddd</div>
+        <div class="item stretch">Lorem ipsum is therefore aleays free from repetition</div>
+        <div class="item end">item 4</div>
+    </section>
+    
+    <h1>Column</h1>
+    <section class="flex-container direction align-container">
+        <div class="item auto">AAA</div>
+        <div class="item auto">123</div>
+        <div class="item auto">Lorem ipsum is therefore aleays free from repetition</div>
+        <div class="item auto">item 4</div>
+    </section>
+    
+    <section class="flex-container  direction">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Lorem ipsum is therefore aleays free from repetition</div>
+        <div class="item end">item 4</div>
+    </section>
+
+    <section class="flex-container direction">
+        <div class="item center">AAA</div>
+        <div class="item start">123</div>
+        <div class="item stretch">Lorem ipsum is therefore aleays free from repetition</div>
+        <div class="item end">item 4</div>
+    </section>
+    
+
+</body>
+</html>

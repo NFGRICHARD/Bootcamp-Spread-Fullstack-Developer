@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex basis</title>
+    <style>
+        .container{
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+        }
+        .item{
+            background-color: coral;
+            color: white;
+            text-align: center;
+            margin: 5px;
+        }
+        .bauto{
+            flex-basis: auto;
+        }
+        .b-0{
+            flex-basis: 0;
+        }
+        .b100{
+            flex-basis: 100px;
+        }
+        .fg-0{
+            flex-grow: 0;
+        }
+        .fg-1{
+            flex-grow: 1;
+        }
+        .fg-2{
+            flex-grow: 2;
+        }
+    </style>
+</head>
+<body>
+    <P>AUTO</P>
+    <div class="container">
+        <div class="item bauto fg-1">A</div>
+        <div class="item bauto fg-1">BBBBB</div>
+        <div class="item bauto fg-1">C</div>
+        <div class="item bauto fg-2">DEF</div>
+    </div>
+    <P>0 (zero) </P>
+    <div class="container">
+        <div class="item b-0 fg-1">AAAAAAAAAAA</div>
+        <div class="item b-0 fg-1">BBBBB</div>
+        <div class="item b-0 fg-1">C</div>
+        <div class="item b-0 fg-2">DEF</div>
+    </div>
+    <P>basis = width</P>
+    <div class="container">
+        <div class="item b100 fg-1">A</div>
+        <div class="item b100 fg-1">BBBBB</div>
+        <div class="item b100 fg-1">C</div>
+        <div class="item b100 fg-1">DEF</div>
+    </div>
+</body>
+</html>
